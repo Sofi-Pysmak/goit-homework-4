@@ -63,8 +63,10 @@ button {
 
 .header {
   display: flex;
-  width: 1600px;
   height: 80px;
+
+  border-bottom: 1px solid;
+  border-color: var(--light-text-color);
 }
 
 .header .logo {
@@ -107,15 +109,8 @@ button {
   margin-right: 50px;
 }
 
-.main-nav-link:visited {
+.main-nav .main-nav-link.current {
   color: var(--accent-color);
-}
-
-.main-nav .main-nav-link .current {
-  border: solid 1px;
-  border-color: var(--accent-color);
-  background-color: var(--accent-color);
-  color: var(--white-text-color);
 }
 
 .header-contacts {
@@ -124,6 +119,7 @@ button {
 
   color: var(--light-text-color);
 }
+
 .header-contacts a {
   color: var(--light-text-color);
 }
@@ -131,11 +127,32 @@ button {
 .header-contacts-link + .header-contacts-link {
   margin-left: 50px;
 }
+
 .main-nav-link,
 .header-contacts-link {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+/* .header.icon-email::before {
+  display: inline-block;
+  content: "";
+  height: 12px;
+  width: 16px;
+  margin-right: 10px;
+  background-image: url("./images/sprite.svg#email");
+  fill: currentColor;
+}
+
+.header.icon-phone::before {
+  display: inline-block;
+  content: "";
+  height: 16px;
+  width: 10px;
+  margin-right: 10px;
+  background-image: url("./images/sprite.svg#phone");
+  align-self: center;
+} */
 
 /* Section hero */
 /* Section hero */
@@ -301,10 +318,10 @@ button {
 }
 /* clients */
 /* clients */
-/* .clients-block {
+.clients-block {
   display: block;
   display: flex;
-} */
+}
 
 .clients-block .clients-title {
   margin-top: 94px;
@@ -315,6 +332,7 @@ button {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  justify-content: center;
 }
 
 .clients-block .clients-list {
@@ -322,29 +340,32 @@ button {
   margin: 0 -15px;
 }
 
-.clients .item {
+/* .clients .item {
   display: inline-block;
   margin: 0 15px;
-}
+} */
 
-.clients .link {
+.clients-list .item {
   display: flex;
   width: 170px;
   height: 90px;
   align-items: center;
   justify-content: center;
+  margin-left: 15px;
+  margin-right: 15px;
 
   border: 1px solid var(--icon-gray-color);
   border-radius: 4px;
-  color: var(--icon-gray-color);
+  fill: var(--icon-gray-color);
 }
 
-.clients .link:hover {
-  color: var(--accent-color);
+.clients-list .icon:hover,
+.clients-list .item:hover {
+  fill: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.clients .icon {
+.clients-list .icon {
   fill: currentColor;
 }
 
